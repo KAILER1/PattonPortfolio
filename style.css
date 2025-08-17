@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.photo-grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.photo-grid-column {
+  flex: 1 1 250px;
+  
+  flex-direction: column;
+  gap:10px
+}
+
+.photo-grid-column img {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width: 900px) {
+  .photo-grid-column {
+    flex: 50%;  
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .photo-grid-column {
+    flex: 100%; 
+    max-width: 100%;
+  }
