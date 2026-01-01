@@ -1,6 +1,9 @@
-html {
-  height: 100%;
+
+
+html, body {
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -8,19 +11,53 @@ a {
 }
 
 
+
+#projects {
+  padding-bottom: 24px;
+}
+
+
+.projects-grid {
+  display: grid;
+  gap: 16px; /* spacing between projects */
+  grid-template-columns: repeat(4, 1fr); /* 4 per row on desktop */
+  margin: 0 auto;
+}
+
+/* Project images */
+.projects-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
 .photo-grid-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; 
+  gap: 10px;
   margin-top: 30px;
   justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 per row */
+@media screen and (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .photo-grid-column {
   flex: 1 1 250px;
-  
+  display: flex;
   flex-direction: column;
-  gap:10px
+  gap: 10px;
 }
 
 .photo-grid-column img {
@@ -31,15 +68,18 @@ a {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+
+
 @media screen and (max-width: 900px) {
   .photo-grid-column {
-    flex: 50%;  
+    flex: 50%;
     max-width: 50%;
   }
 }
 
 @media screen and (max-width: 600px) {
   .photo-grid-column {
-    flex: 100%; 
+    flex: 100%;
     max-width: 100%;
   }
+}
