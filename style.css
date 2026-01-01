@@ -1,6 +1,14 @@
+/* ============================================
+   MALACHI PATTON - PORTFOLIO STYLES
+   ============================================ */
 
+/* ---------- BASE STYLES ---------- */
+html {
+  scroll-behavior: smooth;
+}
 
-html, body {
+html,
+body {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -10,35 +18,12 @@ a {
   text-decoration: none;
 }
 
-
-
-#projects {
-  padding-bottom: 24px;
-}
-
-
-.projects-grid {
-  display: grid;
-  gap: 16px; /* spacing between projects */
-  grid-template-columns: repeat(4, 1fr); /* 4 per row on desktop */
-  margin: 0 auto;
-}
-
-/* Project images */
-.projects-grid img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-
-
+/* ---------- MASONRY GRID (Shared) ---------- */
+.projects-grid,
 .photo-grid-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  column-count: 4;
+  column-gap: 16px;
   margin-top: 30px;
-  justify-content: center;
 }
 @media screen and (max-width: 900px) {
   .projects-grid {
@@ -53,33 +38,50 @@ a {
   }
 }
 
-.photo-grid-column {
-  flex: 1 1 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.projects-grid a,
+.photo-grid-row a {
+  display: block;
+  margin-bottom: 16px;
+  break-inside: avoid;
 }
 
-.photo-grid-column img {
+.projects-grid img,
+.photo-grid-row img {
   width: 100%;
-  margin-bottom: 12px;
+  display: block;
   border-radius: 4px;
-  object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.projects-grid img:hover,
+.photo-grid-row img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
 
-@media screen and (max-width: 900px) {
-  .photo-grid-column {
-    flex: 50%;
-    max-width: 50%;
+/* Large tablets: 3 columns */
+@media screen and (max-width: 1200px) {
+  .projects-grid,
+  .photo-grid-row {
+    column-count: 3;
   }
 }
 
+/* Tablets: 2 columns */
+@media screen and (max-width: 900px) {
+  .projects-grid,
+  .photo-grid-row {
+    column-count: 2;
+  }
+}
+
+/* Mobile: 1 column */
 @media screen and (max-width: 600px) {
-  .photo-grid-column {
-    flex: 100%;
-    max-width: 100%;
+  .projects-grid,
+  .photo-grid-row {
+    column-count: 1;
   }
 }
