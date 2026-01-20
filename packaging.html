@@ -1,0 +1,182 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Packaging Design | Creative Portfolio</title>
+      <meta name="description" content="Portfolio showcasing graphic design projects and photography by Malachi Patton." />
+
+
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+      <link rel="stylesheet" href="style.css" />
+    </head>
+
+
+    <style>
+        /* ---------- GLOBAL STYLES ---------- */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            color: #111;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            border-radius: 6px;
+        }
+
+        /* ---------- SECTION WRAPPER ---------- */
+        .packaging-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        /* ---------- SECTION HEADER ---------- */
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* ---------- PROJECT ROW ---------- */
+        .packaging-project {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        /* ---------- IMAGE COLUMN ---------- */
+        .project-images {
+            display: grid;
+            gap: 20px;
+        }
+
+        .project-images img {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ---------- TEXT COLUMN ---------- */
+        .project-info h2 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .project-info p {
+            font-size: 1rem;
+            color: #333;
+            max-width: 520px;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 900px) {
+            .packaging-project {
+                grid-template-columns: 1fr;
+            }
+
+            .project-info p {
+                max-width: 100%;
+            }
+
+            .section-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+    
+
+<body>
+    <nav class="w3-top">
+      <div class="w3-bar w3-black w3-wide w3-padding w3-card">
+        <a href="index.html" class="w3-bar-item w3-button">
+          <b>MP</b> Creativity
+        </a>
+        <div class="w3-right w3-hide-small">
+          <a href="index.html#projects" class="w3-bar-item w3-button">Projects</a>
+          <a href="index.html#photography" class="w3-bar-item w3-button"
+            >Photography</a>
+            <a href="packaging.html" class="w3-bar-item w3-button">Packaging</a>
+          <a href="about.html" class="w3-bar-item w3-button">About</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="packaging-section">
+
+        <div class="section-header">
+            <h1>Packaging Design</h1>
+            <p>
+                A selection of packaging projects focused on product presentation.
+            </p>
+        </div>
+
+        <!-- UNO PACKAGING PROJECT -->
+        <div class="packaging-project">
+
+            <div class="project-images">
+                <img src="UNO_mockup.jpg" alt="UNO Victorian Style Packaging Mockup">
+                <img src="Box_mu.jpg" alt="UNO Playing Cards Box Mockup">
+            </div>
+
+            <div class="project-info">
+                <h2>UNO Playing Cards — Victorian-Inspired Packaging</h2>
+                <p>
+                    This project reimagines the classic UNO card game through a Victorian
+                    design lens, combining ornate typography, symmetrical layouts, and rich
+                    color tones. The goal was to elevate a familiar product into a premium,
+                    collectible experience while maintaining strong brand recognition. This was hand drawn and then it was illustrated in Adobe Illustrator. Attention to detail was crucial in balancing historical aesthetics with modern readability.
+                    
+                </p>
+            </div>
+
+        </div>
+
+        <!-- DRYING MAT PACKAGING PROJECT -->
+        <div class="packaging-project">
+
+            <div class="project-images">
+                <img src="DM_Mock_2.jpg" alt="Color Drift Drying Mat Packaging">
+                
+            </div>
+
+            <div class="project-info">
+                <h2>Color Drift Reversible Drying Mat — Packaging Design</h2>
+                <p>
+                    This packaging design was made for a company called Color drift. I wanted this project to be a nice, clean and simply design. The layout highlights key features while keeping the design clean and approachable. Emphasis was
+                    placed on legibility, product visibility, and balanced typography to
+                    create packaging that feels both practical and polished for everyday
+                    consumers.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
